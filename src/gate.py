@@ -1,0 +1,9 @@
+REQUIRED={'scale': ['capacity_model', 'growth_forecast', 'saturation_points', 'db_headroom', 'queue_headroom', 'network_limits', 'autoscaling', 'load_test_evidence'], 'cost': ['cost_per_transaction', 'compute_efficiency', 'database_cost', 'egress_cost', 'observability_cost', 'idle_capacity', 'commitment_utilization', 'ownership_tags'], 'kubernetes': ['requests_limits', 'autoscaling', 'pdb', 'topology_spread', 'workload_identity', 'network_policy', 'graceful_shutdown', 'immutable_images', 'rollout_strategy', 'tenant_isolation'], 'cicd': ['test_gate', 'security_scan', 'terraform_plan', 'immutable_artifact', 'nonprod_validation', 'canary_bluegreen', 'health_gate', 'rollback', 'release_audit'], 'iac': ['terraform', 'remote_state', 'locking', 'reviewed_plan', 'module_versioning', 'secure_defaults', 'drift_detection', 'ownership'], 'observability': ['metrics', 'logs', 'traces', 'slos', 'alert_owner', 'runbook', 'deployment_markers', 'dependency_health', 'queue_depth', 'db_health'], 'security': ['iam_least_privilege', 'secrets', 'kms', 'network_segmentation', 'audit_logs', 'waf', 'vulnerability_scan', 'tls', 'privileged_access_review'], 'reliability': ['multi_az', 'failure_domains', 'dependency_mapping', 'graceful_degradation', 'capacity_headroom', 'rollback', 'incident_owner', 'postmortem'], 'dr_bcp': ['rto', 'rpo', 'backup', 'restore_owner', 'restore_test', 'recovery_order', 'failover_path', 'communications_owner'], 'leadership': ['architecture_decision', 'cost_tradeoff', 'vendor_tradeoff', 'mentoring', 'standards', 'developer_experience', 'roadmap', 'cross_team_influence']}
+
+def evaluate(spec):
+    findings=[]
+    for section, fields in REQUIRED.items():
+        values=spec.get(section,{})
+        for field in fields:
+            if not values.get(field): findings.append(f'{section}.{field} is required')
+    return {'allowed': not findings, 'findings': findings}
