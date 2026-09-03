@@ -1,0 +1,108 @@
+{
+  "scale": {
+    "capacity_model": "verified",
+    "growth_forecast": "verified",
+    "saturation_points": "verified",
+    "db_headroom": "verified",
+    "queue_headroom": "verified",
+    "network_limits": "verified",
+    "autoscaling": "verified",
+    "load_test_evidence": "verified"
+  },
+  "cost": {
+    "cost_per_transaction": "verified",
+    "compute_efficiency": "verified",
+    "database_cost": "verified",
+    "egress_cost": "verified",
+    "observability_cost": "verified",
+    "idle_capacity": "verified",
+    "commitment_utilization": "verified",
+    "ownership_tags": "verified"
+  },
+  "kubernetes": {
+    "requests_limits": "verified",
+    "autoscaling": "verified",
+    "pdb": "verified",
+    "topology_spread": "verified",
+    "workload_identity": "verified",
+    "network_policy": "verified",
+    "graceful_shutdown": "verified",
+    "immutable_images": "verified",
+    "rollout_strategy": "verified",
+    "tenant_isolation": "verified"
+  },
+  "cicd": {
+    "test_gate": "verified",
+    "security_scan": "verified",
+    "terraform_plan": "verified",
+    "immutable_artifact": "verified",
+    "nonprod_validation": "verified",
+    "canary_bluegreen": "verified",
+    "health_gate": "verified",
+    "rollback": "verified",
+    "release_audit": "verified"
+  },
+  "iac": {
+    "terraform": "verified",
+    "remote_state": "verified",
+    "locking": "verified",
+    "reviewed_plan": "verified",
+    "module_versioning": "verified",
+    "secure_defaults": "verified",
+    "drift_detection": "verified",
+    "ownership": "verified"
+  },
+  "observability": {
+    "metrics": "verified",
+    "logs": "verified",
+    "traces": "verified",
+    "slos": "verified",
+    "alert_owner": "verified",
+    "runbook": "verified",
+    "deployment_markers": "verified",
+    "dependency_health": "verified",
+    "queue_depth": "verified",
+    "db_health": "verified"
+  },
+  "security": {
+    "iam_least_privilege": "verified",
+    "secrets": "verified",
+    "kms": "verified",
+    "network_segmentation": "verified",
+    "audit_logs": "verified",
+    "waf": "verified",
+    "vulnerability_scan": "verified",
+    "tls": "verified",
+    "privileged_access_review": "verified"
+  },
+  "reliability": {
+    "multi_az": "verified",
+    "failure_domains": "verified",
+    "dependency_mapping": "verified",
+    "graceful_degradation": "verified",
+    "capacity_headroom": "verified",
+    "rollback": "verified",
+    "incident_owner": "verified",
+    "postmortem": "verified"
+  },
+  "dr_bcp": {
+    "rto": "verified",
+    "rpo": "verified",
+    "backup": "verified",
+    "restore_owner": "verified",
+    "restore_test": "verified",
+    "recovery_order": "verified",
+    "failover_path": "verified",
+    "communications_owner": "verified"
+  },
+  "leadership": {
+    "architecture_decision": "verified",
+    "cost_tradeoff": "verified",
+    "vendor_tradeoff": "verified",
+    "mentoring": "verified",
+    "standards": "verified",
+    "developer_experience": "verified",
+    "roadmap": "verified",
+    "cross_team_influence": "verified"
+  }
+}
